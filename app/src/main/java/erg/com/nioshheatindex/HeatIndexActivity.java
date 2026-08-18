@@ -16,6 +16,7 @@ import android.location.Geocoder;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.NetworkCapabilities;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import androidx.annotation.NonNull;
@@ -489,13 +490,20 @@ public class HeatIndexActivity extends AppCompatActivity {
 
     private boolean isInternetConnection() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+        if (connectivityManager == null) {
+            return false;
+        }
+        android.net.Network activeNetwork = connectivityManager.getActiveNetwork();
+        NetworkCapabilities capabilities = connectivityManager.getNetworkCapabilities(activeNetwork);
+        return capabilities != null
+                && capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET);
     }
 
     private boolean isLocationEnabled(){
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        return locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        return locationManager != null
+                && (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
+                || locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER));
     }
 
     private void checkCachedData() {
@@ -514,16 +522,16 @@ public class HeatIndexActivity extends AppCompatActivity {
         MobileCore.lifecycleStart(null);
 
         if(isInternetConnection()) {
-            if (isLocationEnabled()){
-                onLine = true;
-                useCache = isCacheEnabled();
-                useCelsius = isCelsiusEnabled();
-                isManual = false;
+            onLine = true;
+            useCache = isCacheEnabled();
+            useCelsius = isCelsiusEnabled();
+            isManual = false;
+            if (isLocationEnabled()) {
                 getCurrentLocationName();
-            }else{
-                onLine = false;
+            } else {
+                showToastNoLocationFound();
             }
-        }else {
+        } else {
             onLine = false;
         }
         if(!onLine){
