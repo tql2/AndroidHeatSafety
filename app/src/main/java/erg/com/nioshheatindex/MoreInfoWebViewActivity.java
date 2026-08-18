@@ -100,7 +100,7 @@ public class MoreInfoWebViewActivity extends AppCompatActivity {
                 case ("about"):
                     tv.setText(getString(R.string.txtabout));
                     iv.setContentDescription(getString(R.string.txtabout));
-                    if(lang == "en"){
+                    if("en".equals(lang)){
                         strPath = "file:///android_asset/about_this_app.html";
                     }else{
                         strPath = "file:///android_asset/about_this_app_es.html";
@@ -113,7 +113,7 @@ public class MoreInfoWebViewActivity extends AppCompatActivity {
                 case ("contact"):
                     tv.setText(getString(R.string.txtcontactus));
                     iv.setContentDescription(getString(R.string.txtcontactus) + ". " + getString(R.string.txtContactNoEmergency));
-                    if(lang == "en"){
+                    if("en".equals(lang)){
                         strPath = "file:///android_asset/contact_osha.html";
                     }else{
                         strPath = "file:///android_asset/contact_osha_es.html";
@@ -148,7 +148,7 @@ public class MoreInfoWebViewActivity extends AppCompatActivity {
                     });
                     tv.setText(getString(R.string.txtmoretips));
                     iv.setContentDescription(getString(R.string.txtmoretips));
-                    if(lang == "en"){
+                    if("en".equals(lang)){
                         strPath = "file:///android_asset/more_details.html";
                     }else{
                         strPath = "file:///android_asset/more_details_es.html";
@@ -161,7 +161,7 @@ public class MoreInfoWebViewActivity extends AppCompatActivity {
                 case ("riskfactors"):
                     tv.setText(getString(R.string.txtriskfactors));
                     iv.setContentDescription(getString(R.string.txtriskfactors));
-                    if(lang == "en"){
+                    if("en".equals(lang)){
                         strPath = "file:///android_asset/risk_factors.html";
                     }else{
                         strPath = "file:///android_asset/risk_factors_es.html";
@@ -174,7 +174,7 @@ public class MoreInfoWebViewActivity extends AppCompatActivity {
                 case ("faq"):
                     tv.setText(getString(R.string.txtfaq));
                     iv.setContentDescription(getString(R.string.txtfaq));
-                    if(lang == "en"){
+                    if("en".equals(lang)){
                         strPath = "file:///android_asset/about_faq.html";
                     }else{
                         strPath = "file:///android_asset/about_faq_es.html";

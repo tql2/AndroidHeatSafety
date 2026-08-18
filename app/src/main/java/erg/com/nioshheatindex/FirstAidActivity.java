@@ -184,7 +184,7 @@ public class FirstAidActivity extends AppCompatActivity {
         if(lang.length() <= 0) {
             lang = Locale.getDefault().getLanguage();
         }
-        if(lang == "es")
+        if("es".equals(lang))
         {
             strPath = "file:///android_asset/first_aid_es.html";
         }

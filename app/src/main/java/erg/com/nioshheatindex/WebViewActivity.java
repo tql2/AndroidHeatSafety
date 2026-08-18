@@ -98,7 +98,7 @@ public class WebViewActivity extends AppCompatActivity {
                     break;
                 case(1):
                     tv.setText(R.string.more_banner_text);
-                    if(lang == "en"){
+                    if("en".equals(lang)){
                         strPath = "file:///android_asset/more_details.html";
                     }else{
                         strPath = "file:///android_asset/more_details_es.html";
@@ -110,7 +110,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case(2):
                     tv.setText(R.string.hi_precations_btn_text);
                     //myWebView.loadUrl("file:///android_res/raw/precautions_lower.html");
-                    if(lang == "en"){
+                    if("en".equals(lang)){
                         strPath = "file:///android_asset/precautions_moderate.html";
                     }else{
                         strPath = "file:///android_asset/precautions_moderate_es.html";
@@ -122,7 +122,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case(3):
                     tv.setText(R.string.hi_precations_btn_text);
                     //myWebView.loadUrl("file:///android_res/raw/precautions_high.html");
-                    if(lang == "en"){
+                    if("en".equals(lang)){
                         strPath = "file:///android_asset/precautions_high.html";
                     }else{
                         strPath = "file:///android_asset/precautions_high_es.html";
@@ -134,7 +134,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case(4):
                     tv.setText(R.string.hi_precations_btn_text);
                     //myWebView.loadUrl("file:///android_res/raw/precautions_veryhigh.html");
-                    if(lang == "en"){
+                    if("en".equals(lang)){
                         strPath = "file:///android_asset/precautions_veryhigh.html";
                     }else{
                         strPath = "file:///android_asset/precautions_veryhigh_es.html";

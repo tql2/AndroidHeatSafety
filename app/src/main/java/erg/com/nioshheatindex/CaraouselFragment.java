@@ -46,7 +46,7 @@ public class CaraouselFragment extends Fragment {
         TextView tv = l.findViewById(R.id.text);
         boolean cels = TodayActivity.useCelsius;
 
-        if(hour == "")
+        if(hour.isEmpty())
         {
             if (spanish) {
                 tv.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.nodatacard_es));

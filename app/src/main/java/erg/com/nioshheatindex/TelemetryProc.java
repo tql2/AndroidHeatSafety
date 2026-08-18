@@ -34,7 +34,7 @@ class TelemetryProc
                     String language = Locale.getDefault().getISO3Language();
                     String event = null;
                     // types are either app or nav
-                    if(sType == "app")
+                    if("app".equals(sType))
                     {
                         event = "Application: Launch";
                     }

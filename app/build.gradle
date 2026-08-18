@@ -36,9 +36,9 @@ dependencies {
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
 
     // Adobe Analyticd
-    implementation 'com.adobe.marketing.mobile:analytics:1.+'
-    implementation 'com.adobe.marketing.mobile:userprofile:1.+'
-    implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
+    implementation 'com.adobe.marketing.mobile:analytics:1.2.10'
+    implementation 'com.adobe.marketing.mobile:userprofile:1.1.0'
+    implementation 'com.adobe.marketing.mobile:sdk-core:1.11.7'
     //implementation files('src/main/libs/adobeMobileLibrary-4.18.2.jar')
     //testImplementation 'junit:junit:4.12'
 }

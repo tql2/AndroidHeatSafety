@@ -1,59 +1,49 @@
 package erg.com.nioshheatindex;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-public class ParsedDataSetWeather
-{
-    private final Vector veclocation = new Vector();
-    private final Vector temperature = new Vector();
-    private final Vector humidity = new Vector();
-    private final Vector maxtime = new Vector();
+public class ParsedDataSetWeather {
+    private final List<String> locations = new ArrayList<>();
+    private final List<String> temperatures = new ArrayList<>();
+    private final List<String> humidities = new ArrayList<>();
+    private final List<String> times = new ArrayList<>();
 
-    public void addlocation(String myVal)
-    {
-        veclocation.add(myVal);
-    }
-
-    public void addtemperature(String myVal)
-    {
-    	temperature.add(myVal);
-    }
-    
-    public void addhumidity(String myVal)
-    {
-    	humidity.add(myVal);
+    public void addlocation(String value) {
+        locations.add(value);
     }
 
-    public Vector getlocation()
-    {
-        return veclocation;
+    public void addtemperature(String value) {
+        temperatures.add(value);
     }
 
-    public Vector gettemperature()
-    {
-    	return temperature;
-    }
-    
-    public Vector gethumidity()
-    {
-    	return humidity;
-    }
-    
-    public void addmaxtime(String myVal)
-    {
-    	maxtime.add(myVal);
+    public void addhumidity(String value) {
+        humidities.add(value);
     }
 
-    public Vector getmaxtime()
-    {
-    	return maxtime;
+    public List<String> getlocation() {
+        return Collections.unmodifiableList(locations);
     }
 
-    public String toString()
-    {
-	    String myString="";
-	    myString = temperature.toString() + humidity.toString();       
-	    return myString;
+    public List<String> gettemperature() {
+        return Collections.unmodifiableList(temperatures);
+    }
+
+    public List<String> gethumidity() {
+        return Collections.unmodifiableList(humidities);
+    }
+
+    public void addmaxtime(String value) {
+        times.add(value);
+    }
+
+    public List<String> getmaxtime() {
+        return Collections.unmodifiableList(times);
+    }
+
+    @Override
+    public String toString() {
+        return temperatures + " " + humidities;
     }
 }
-

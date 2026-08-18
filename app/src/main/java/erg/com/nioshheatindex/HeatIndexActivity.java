@@ -56,7 +56,6 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
-import java.util.Vector;
 import java.util.concurrent.TimeUnit;
 
 import static erg.com.nioshheatindex.R.id.view;
@@ -78,10 +77,11 @@ public class HeatIndexActivity extends AppCompatActivity {
     public static String siteLocation = null;
     public static String defaultLocation = null;
     private boolean spanish = false;
-    private static Vector myLocationVec = new Vector(); //Cached Location data
-    private static Vector myTempVec = new Vector(); //Cached Temperature data
-    private static Vector myHumidVec = new Vector(); //Cached Humidity data
-    private static Vector myTimeVec = new Vector(); //Cached Time data
+    private static List<String> myLocationVec = new ArrayList<>(); //Cached Location data
+    private static List<String> myTempVec = new ArrayList<>(); //Cached Temperature data
+    private static List<String> myHumidVec = new ArrayList<>(); //Cached Humidity data
+    private static List<String> myTimeVec = new ArrayList<>(); //Cached Time data
+    private ProcessXML weatherRequest;
     public static double dblLatitude = 0;
     public static double dblLongitude = 0;
     public static String defaultTZ = null;
@@ -303,7 +303,7 @@ public class HeatIndexActivity extends AppCompatActivity {
                     if(isCelsiusEnabled()) {
                         if(sTemp.length() > 0 )
                         {
-                            float inputValue = Float.parseFloat(sTemp);
+                            float inputValue = (float) parseUserNumber(sTemp);
                             float tmp = convertCelsiusToFahrenheit(inputValue);
                             sTemp = String.valueOf(tmp);
                         }
@@ -311,7 +311,8 @@ public class HeatIndexActivity extends AppCompatActivity {
                     //Show precautions button and text
                     showStuff();
                     // In Range Temp Values are -50 F = -45.55 C;  140 F = 60.00 C
-                    if (sTemp.length() > 0 && Double.parseDouble(String.valueOf(sTemp)) >= -50 && Double.parseDouble(String.valueOf(sTemp)) <= 140)
+                    double parsedTemperature = sTemp.length() > 0 ? parseUserNumber(sTemp) : Double.NaN;
+                    if (!Double.isNaN(parsedTemperature) && parsedTemperature >= -50 && parsedTemperature <= 140)
                     {
                         nbView.setVisibility(View.VISIBLE);
                         editLocation.setText(getString(R.string.labelForCalculated));
@@ -377,7 +378,8 @@ public class HeatIndexActivity extends AppCompatActivity {
                     showStuff();
 
                     // catch if number is out of range here before manual function
-                    if (sHumidity.length() > 0 && Double.parseDouble(String.valueOf(sHumidity)) >= 0 && Double.parseDouble(String.valueOf(sHumidity)) <= 100)
+                    double parsedHumidity = sHumidity.length() > 0 ? parseUserNumber(sHumidity) : Double.NaN;
+                    if (!Double.isNaN(parsedHumidity) && parsedHumidity >= 0 && parsedHumidity <= 100)
                     {
 
                         editLocation.setText(getString(R.string.labelForCalculated));
@@ -736,8 +738,8 @@ public class HeatIndexActivity extends AppCompatActivity {
         {
             if (lat != 0 && lng != 0)
             {
-                String myUrl = "https://forecast.weather.gov/MapClick.php?lat=" + lat + "&lon=" + lng + "&FcstType=digitalDWML";
-                new ProcessXML(this, myUrl).execute();
+                weatherRequest = new ProcessXML(this, lat, lng);
+                weatherRequest.execute();
             }
             else
             {
@@ -751,6 +753,10 @@ public class HeatIndexActivity extends AppCompatActivity {
     }
 
     public void callBackData(ParsedDataSetWeather myData){
+        if (myData == null) {
+            showToastServerOutage();
+            return;
+        }
         double myValue;
         myValue = getHeatIndexFromNoaaData(myData);
         EditText editText1 = findViewById(R.id.temp);
@@ -879,8 +885,8 @@ public class HeatIndexActivity extends AppCompatActivity {
             // Populate edittext location will location description from XML
             for (int i = 0; i < myLocationVec.size(); i++) {
                 String val = (String) myLocationVec.get(i);
-                String parts[] = val.split(", ");
-                String Loc = parts[0];
+                String[] parts = val.split(", ");
+                String Loc = parts.length > 0 ? parts[0].trim() : val.trim();
                 String renameLoc = getState(Loc);
                 EditText editLocation = findViewById(R.id.location);
                 editLocation.setText(renameLoc);
@@ -891,39 +897,20 @@ public class HeatIndexActivity extends AppCompatActivity {
                 }
             }
 
-            //results HeatIndex Array
-            double[] myHIarray = new double[myTempVec.size()];
-
-            //put vector values to array for calculation later
-            int[] myTempArray = new int[myTempVec.size()];
-            for (int i = 0; i < myTempVec.size(); i++) {
-                String val = (String) myTempVec.get(i);
-                myTempArray[i] = stringToInt(val);
+            int size = Math.min(myVecSize, Math.min(myTempVec.size(),
+                    Math.min(myHumidVec.size(), myTimeVec.size())));
+            if (size == 0) {
+                return 0;
             }
 
-            int[] myHumidArray = new int[myHumidVec.size()];
-            for (int i = 0; i < myHumidVec.size(); i++) {
-                String val = (String) myHumidVec.get(i);
-                myHumidArray[i] = stringToInt(val);
-            }
-
-            int myCurrentIndex = 0;      //the index of the first data for our calculation
-
-            int[] myTempArray2 = new int[myVecSize];
-            for (int i = 0; i < myVecSize; i++) {
-                myTempArray2[i] = myTempArray[i + myCurrentIndex];
-            }
-
-            int[] myHumidArray2 = new int[myVecSize];
-            for (int i = 0; i < myVecSize; i++) {
-                myHumidArray2[i] = myHumidArray[i + myCurrentIndex];
-            }
-
-            int size = myTempArray2.length; //24
-
-            String[] myTimeArray = new String[myVecSize];
+            double[] myHIarray = new double[size];
+            int[] myTempArray2 = new int[size];
+            int[] myHumidArray2 = new int[size];
+            String[] myTimeArray = new String[size];
             for (int i = 0; i < size; i++) {
-                String val = (String) myTimeVec.get(i);
+                myTempArray2[i] = stringToInt(myTempVec.get(i));
+                myHumidArray2[i] = stringToInt(myHumidVec.get(i));
+                String val = myTimeVec.get(i);
                 strParsedVecTime = parseTimeVecDate(val);
                 myTimeArray[i] = strParsedVecTime;
             }
@@ -1246,13 +1233,15 @@ public class HeatIndexActivity extends AppCompatActivity {
 
     public void showHeatNotice(String type){
         String noticeText;
-        if(type == "F"){
+        if("F".equals(type)){
             noticeText = getResources().getString(R.string.heatnoticealert_F);
         }else{
             noticeText = getResources().getString(R.string.heatnoticealert_C);
         }
         SpannableString spannableStr = new SpannableString(noticeText);
-        spannableStr.setSpan(new StyleSpan(Typeface.ITALIC), 190, 211, 0);
+        if (noticeText.length() >= 211) {
+            spannableStr.setSpan(new StyleSpan(Typeface.ITALIC), 190, 211, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         View viewDialog = LayoutInflater.from(this).inflate(R.layout.custom_alert_dialog, null);
         alert.setView(viewDialog);
@@ -1276,7 +1265,7 @@ public class HeatIndexActivity extends AppCompatActivity {
         sTemp = sTemp.replace("℉", "");
         if(isCelsiusEnabled())
         {
-            float inputValue = Float.parseFloat(sTemp);
+            float inputValue = (float) parseUserNumber(sTemp);
             float tmp = convertCelsiusToFahrenheit(inputValue);
             sTemp = String.valueOf(tmp);
         }
@@ -1287,8 +1276,11 @@ public class HeatIndexActivity extends AppCompatActivity {
             Calendar newCal = Calendar.getInstance();
             SimpleDateFormat sdf = new SimpleDateFormat("h:mm a", Locale.getDefault());
             strParsedTime = sdf.format(newCal.getTime());
-            double temp = Double.parseDouble(String.valueOf(sTemp));
-            int humidity = Integer.parseInt(sHumidity);
+            double temp = parseUserNumber(sTemp);
+            int humidity = (int) parseUserNumber(sHumidity);
+            if (Double.isNaN(temp) || Double.isNaN(humidity)) {
+                throw new NumberFormatException("Invalid manual weather input");
+            }
             double heatIndex = calculateHeatIndex.heatIndexCal(temp, humidity);
 
             if (heatIndex < 60) {
@@ -1297,8 +1289,6 @@ public class HeatIndexActivity extends AppCompatActivity {
                 ThermometerRiskLevel = 2; // Caution
             } else if (heatIndex < 95) {
                 ThermometerRiskLevel = 3; // Warning
-            } else if (heatIndex < 131) {
-                ThermometerRiskLevel = 4; // Danger
             } else {
                 ThermometerRiskLevel = 4; // Danger
             }
@@ -1319,7 +1309,7 @@ public class HeatIndexActivity extends AppCompatActivity {
         // Populate edittext location will location description from XML
         for (int i = 0; i < myLocationVec.size(); i++)
         {
-            String val = (String) myLocationVec.get(i);
+            String val = myLocationVec.get(i);
             String parts[] = val.split(", ");
             String Loc = parts[0];
             String renameLoc = getState(Loc);
@@ -1328,44 +1318,23 @@ public class HeatIndexActivity extends AppCompatActivity {
             siteLocation = renameLoc;
         }
 
-        //results HeatIndex Array
-        double[] myHIarray = new double[myTempVec.size()];
-
-        //put vector values to array for calculation later
-        int[] myTempArray = new int[myTempVec.size()];
-        for (int i = 0; i < myTempVec.size(); i++)
-        {
-            String val = (String) myTempVec.get(i);
-            myTempArray[i] = stringToInt(val);
+        int size = Math.min(myVecSize, Math.min(myTempVec.size(),
+                Math.min(myHumidVec.size(), myTimeVec.size())));
+        if (size == 0) {
+            return 0;
+        }
+        double[] myHIarray = new double[size];
+        int[] myTempArray2 = new int[size];
+        int[] myHumidArray2 = new int[size];
+        for (int i = 0; i < size; i++) {
+            myTempArray2[i] = stringToInt(myTempVec.get(i));
+            myHumidArray2[i] = stringToInt(myHumidVec.get(i));
         }
 
-        int[] myHumidArray = new int[myHumidVec.size()];
-        for (int i = 0; i < myHumidVec.size(); i++)
-        {
-            String val = (String) myHumidVec.get(i);
-            myHumidArray[i] = stringToInt(val);
-        }
-
-        int myCurrentIndex = 0;      //the index of the first data for our calculation
-
-        int[] myTempArray2 = new int[myVecSize];
-        for (int i = 0; i < myVecSize; i++)
-        {
-            myTempArray2[i] = myTempArray[i + myCurrentIndex];
-        }
-
-        int[] myHumidArray2 = new int[myVecSize];
-        for (int i = 0; i < myVecSize; i++)
-        {
-            myHumidArray2[i] = myHumidArray[i + myCurrentIndex];
-        }
-
-        int size = myTempArray2.length; //24
-
-        String[] myTimeArray = new String[myVecSize];
+        String[] myTimeArray = new String[size];
         for (int i = 0; i < size; i++)
         {
-            String val = (String) myTimeVec.get(i);
+            String val = myTimeVec.get(i);
 
             if(i == 1)
             {
@@ -1716,6 +1685,24 @@ public class HeatIndexActivity extends AppCompatActivity {
         return stime;
     }
 
+    private double parseUserNumber(String rawValue) {
+        String value = rawValue == null ? "" : rawValue.trim().replaceAll("[^0-9,.-]", "");
+        if (value.isEmpty()) {
+            throw new NumberFormatException("Empty numeric value");
+        }
+        char decimalSeparator = java.text.DecimalFormatSymbols.getInstance(Locale.getDefault()).getDecimalSeparator();
+        if (decimalSeparator == ',') {
+            value = value.replace(".", "").replace(',', '.');
+        } else {
+            value = value.replace(",", "");
+        }
+        try {
+            return Double.parseDouble(value);
+        } catch (NumberFormatException ignored) {
+            return Double.NaN;
+        }
+    }
+
     private int stringToInt(String inValue) {
         int retValue = 0;
         try
@@ -1747,6 +1734,15 @@ public class HeatIndexActivity extends AppCompatActivity {
             }
         });
         alert.show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (weatherRequest != null) {
+            weatherRequest.cancel();
+            weatherRequest = null;
+        }
+        super.onDestroy();
     }
 
     private void showToastNoLocationFound(){

@@ -191,7 +191,7 @@ public class SymptomsActivity extends AppCompatActivity {
         if(lang.length() <= 0) {
             lang = Locale.getDefault().getLanguage();
         }
-        if(lang == "es")
+        if("es".equals(lang))
         {
             strPath = "file:///android_asset/signs_and_symptoms_es.html";
         }

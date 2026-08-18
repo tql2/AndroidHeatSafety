@@ -21,6 +21,7 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AlertDialog;
 
 import android.text.SpannableString;
+import android.text.Spannable;
 import android.text.style.StyleSpan;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
@@ -562,13 +563,13 @@ public class TodayActivity extends FragmentActivity {
                         int converted = Integer.valueOf(hi);
                         if(converted > 137){
                         //if (converted > 80){
-                            String locality = getLocale();
                             String noticeText = getResources().getString(R.string.txtExtremeRiskAlert);
                             SpannableString spannableStr = new SpannableString(noticeText);
-                            if(getLocale() == "en"){
-                                spannableStr.setSpan(new StyleSpan(Typeface.ITALIC), 66, 82, 0);
-                            }else{
-                                spannableStr.setSpan(new StyleSpan(Typeface.ITALIC), 86, 108, 0);
+                            int spanStart = "en".equals(getLocale()) ? 66 : 86;
+                            int spanEnd = "en".equals(getLocale()) ? 82 : 108;
+                            if (noticeText.length() >= spanEnd) {
+                                spannableStr.setSpan(new StyleSpan(Typeface.ITALIC), spanStart, spanEnd,
+                                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
                             }
                             txtMainText.setText(spannableStr);
                         }else{
