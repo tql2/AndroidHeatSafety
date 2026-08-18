@@ -1,25 +1,29 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
+    namespace "erg.com.nioshheatindex"
+    buildFeatures {
+        buildConfig true
+    }
+    compileSdk 37
 
     defaultConfig {
         applicationId "erg.com.nioshheatindex"
-        minSdkVersion 26
-        targetSdkVersion 33
+        minSdk 26
+        targetSdk 35
         versionCode 20
         versionName "3.4"
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
@@ -27,10 +31,8 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
-    implementation 'com.google.android.gms:play-services-analytics:18.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
 
     // Adobe Analyticd
@@ -39,5 +41,4 @@ dependencies {
     implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
     //implementation files('src/main/libs/adobeMobileLibrary-4.18.2.jar')
     //testImplementation 'junit:junit:4.12'
-    implementation 'androidx.multidex:multidex:2.0.1'
 }
