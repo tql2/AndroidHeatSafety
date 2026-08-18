@@ -6,62 +6,75 @@
               android:layout_alignParentBottom="true"
               android:layout_centerHorizontal="true"
               android:background="@color/navbargray"
-              android:gravity="bottom|center|fill"
+              android:elevation="8dp"
+              android:gravity="bottom|center"
               android:orientation="horizontal"
+              android:paddingTop="6dp"
+              android:paddingBottom="4dp"
               android:weightSum="5">
 
     <Button
         android:id="@+id/hiButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/heatbig"
+        android:gravity="center"
         android:text="@string/hi_btn_text"
-        android:textSize="10sp" />
+        android:textColor="@color/textSecondary"
+        android:textSize="10sp"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/tdyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/clockbig"
+        android:gravity="center"
         android:text="@string/today_btn_text"
-        android:textSize="10sp" />
+        android:textColor="@color/textSecondary"
+        android:textSize="10sp"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/sButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/symptomsbig"
+        android:gravity="center"
         android:text="@string/symptoms_btn_text"
-        android:textSize="10sp" />
+        android:textColor="@color/textSecondary"
+        android:textSize="10sp"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/faButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/firstaidbig"
+        android:gravity="center"
         android:text="@string/firstaid_btn_text"
-        android:textSize="10sp" />
+        android:textColor="@color/textSecondary"
+        android:textSize="10sp"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/mButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/morebig"
+        android:gravity="center"
         android:text="@string/more_btn_text"
-        android:textSize="10sp" />
+        android:textColor="@color/textSecondary"
+        android:textSize="10sp"
+        android:textAllCaps="false" />
 </LinearLayout>

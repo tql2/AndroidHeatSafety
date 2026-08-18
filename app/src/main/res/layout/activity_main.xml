@@ -4,6 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/surface"
     >
 
     <erg.com.nioshheatindex.SlidingSplashView
@@ -23,12 +24,13 @@
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="24dp"
-        android:background="@color/tutorialbutton"
+        android:background="@drawable/button_primary"
         android:contentDescription="@string/tutorialdismiss"
         android:text="@string/tutorialdismiss"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="18sp"
+        android:minHeight="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

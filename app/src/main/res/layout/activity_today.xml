@@ -9,7 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/surface">
 
         <ImageView
             android:id="@+id/imageViewTodayTopPic"
@@ -90,13 +91,14 @@
             android:layout_marginEnd="64dp"
             android:layout_marginStart="64dp"
             android:layout_marginTop="8dp"
-            android:background="#d11406"
+            android:background="@drawable/button_primary"
             android:contentDescription="@string/multipurposebtn_desc"
             android:text="@string/hi_precations_btn_text"
             android:textAllCaps="false"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="normal"
+            android:minHeight="52dp"
             app:layout_constraintBottom_toTopOf="@+id/tvMainText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +113,7 @@
             android:layout_marginStart="8dp"
             android:gravity="center_horizontal"
             android:paddingTop="10dp"
-            android:textColor="#000000"
+            android:textColor="@color/textPrimary"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/include2"
             app:layout_constraintEnd_toEndOf="parent"
