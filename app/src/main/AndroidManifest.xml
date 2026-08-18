@@ -35,6 +35,7 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".HeatIndexActivity"
+            android:hardwareAccelerated="false"
             android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".UAScreen" />
         <activity android:name=".TodayActivity" />
