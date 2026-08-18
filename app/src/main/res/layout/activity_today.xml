@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<erg.com.nioshheatindex.Zoomlayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/zoomLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewTodayTopPic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/today_banner_desc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hourlyindex"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/imageViewTextToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
+            android:text="@string/today_banner_text"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewTodayTopPic"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/txttutorial"
+            android:scaleType="centerCrop"
+            android:src="@drawable/helpbutton"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewTodayTopPic"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewTodayTopPic"/>
+
+        <ImageButton
+            android:id="@+id/btnReminders"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/txtreminders"
+            android:scaleType="centerCrop"
+            android:src="@drawable/reminder_button"
+            app:layout_constraintBottom_toBottomOf="@+id/btnHome"
+            app:layout_constraintEnd_toStartOf="@+id/btnHome"
+            app:layout_constraintTop_toTopOf="@+id/btnHome"
+            />
+
+        <TextView
+            android:id="@+id/atLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/location"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnAP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myviewpager"/>
+
+        <Button
+            android:id="@+id/btnAP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="8dp"
+            android:background="#d11406"
+            android:contentDescription="@string/multipurposebtn_desc"
+            android:text="@string/hi_precations_btn_text"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/tvMainText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/atLocation"/>
+
+        <TextView
+            android:id="@+id/tvMainText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/include2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAP"/>
+
+        <include
+            android:id="@+id/include2"
+            layout="@layout/nav_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/myviewpager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/hourlycarousel_desc"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@+id/atLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewTodayTopPic"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</erg.com.nioshheatindex.Zoomlayout>

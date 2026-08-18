@@ -1,0 +1,268 @@
+<resources>
+    <string name="app_name">CALOR</string>
+
+    <string name="txtminimal">Mínimo</string>
+    <string name="txtcaution">Cautela</string>
+    <string name="txtwarning">Advertencia</string>
+    <string name="txtdanger">Peligro</string>
+
+    <string name="txtsplashscreen">OSHA NIOSH Heat Safety Tool</string>
+    <string name="txtgood">El sistema operativo es bueno</string>
+    <string name="txtgoodmem">La memoria del sistema es buena</string>
+
+    <string name="ua_banner_text">Términos de Uso</string>
+    <string name="ua_banner_desc">Esta pantalla muestra los términos de uso del Acuerdo de usuario.</string>
+    <string name="ua_text">LOS MATERIALES COMPRENDIDOS EN ESTE SOFTWARE SE PROPORCIONAN TAL CUAL Y SIN GARANTÍA DE NINGUNA CLASE, EXPLÍCITA NI DE OTRO TIPO, INCLUSO SIN LÍMITE, NI GARANTÍA ALGUNA DE ADAPTACIÓN PARA UN FIN PARTICULAR. EN NINGÚN CASO SE RESPONSABILIZARÁ A LOS CENTROS PARA EL CONTROL Y LA PREVENCIÓN DE ENFERMEDADES (CDC) NI AL GOBIERNO DE LOS ESTADOS UNIDOS (EE. UU.) FRENTE A USTED O CUALQUIER OTRA PERSONA POR DAÑOS DE CUALQUIER ÍNDOLE, BIEN SEAN DIRECTOS, ESPECIALES, FORTUITOS, INDIRECTOS O CONSECUENCIALES, NI POR NINGÚN DAÑO EN ABSOLUTO, INCLUIDOS, ENTRE OTROS, PÉRDIDA DE GANANCIAS, PÉRDIDA DE USO, DE AHORROS O INGRESOS, O DE RECLAMACIONES DE TERCERAS PARTES, YA SEA QUE LOS CDC O EL GOBIERNO DE LOS EE. UU. HUBIERAN SIDO AVISADOS DE LA POSIBILIDAD DE TAL PÉRDIDA, DE CUALQUIER MODO CAUSADA Y EN CUALQUIER TEORÍA DE RESPONSABILIDAD, SURGIDA DE O EN CONEXIÓN CON LA POSESIÓN, USO O FUNCIONAMIENTO DE ESTE SOFTWARE.</string>
+    <string name="ua_button_text">De Acuerdo</string>
+    <string name="ua_button_desc">Acepto las condiciones de uso</string>
+
+    <string name="hi_btn_text">Índice de Calor</string>
+    <string name="hi_banner_text">Índice de Calor</string>
+    <string name="hi_banner_desc">Esta pantalla muestra el índice de calor actual para su ubicación.</string>
+    <string name="today_btn_text">Por Hora</string>
+    <string name="today_banner_text">Índice de Hora</string>
+    <string name="today_banner_desc">Esta pantalla muestra la información del índice de calor cada hora, ya que se prevé que cambie a lo largo del día.</string>
+    <string name="symptoms_btn_text">Síntomas</string>
+    <string name="symptoms_banner_text">Signos y Síntomas</string>
+    <string name="symptoms_banner_desc">Esta pantalla detalla los signos y síntomas de enfermedades relacionadas con el calor.</string>
+    <string name="firstaid_btn_text">Ayuda</string>
+    <string name="firstaid_banner_text">Primeros Auxilios</string>
+    <string name="firstaid_banner_desc">Esta pantalla muestra información de primeros auxilios para enfermedades relacionadas con el calor.</string>
+    <string name="more_btn_text">Más</string>
+    <string name="more_banner_text">Más Info</string>
+    <string name="more_banner_desc">Esta página ofrece información adicional acerca de la aplicación, así como información de contacto, más sugerencias, factores de riesgo, preguntas frecuentes y configuración de preferencias.</string>
+    <string name="hi_noservice_message">No se pudieron obtener los datos del tiempo. Revise la configuración de red y desactive el modo avión.</string>
+    <string name="reachabilityerror">Error de accesibilidad</string>
+    <string name="heat_index_gauge">Medidor de índice de calor</string>
+    <string name="hi_precations_btn_text">Precauciones</string>
+    <string name="hi_allpurpose_btn_minrisk">Más Info</string>
+
+    <string name="greaterthan">\u003E</string>
+    <string name="notice">Notar</string>
+    <string name="heatnoticealert_F">Aunque este índice de calor se clasifique correctamente en el nivel de riesgo de peligro con la necesidad de tomar precauciones adicionales adecuadas, cualquier valor del índice de calor de más de 137°F(58.3\u2103) podría sobrestimar <i>cuánto calor se siente</i>. Para obtener más información, consulte las preguntas frecuentes.</string>
+    <string name="heatnoticealert_C">Aunque este índice de calor se clasifique correctamente en el nivel de riesgo de peligro con la necesidad de tomar precauciones adicionales adecuadas, cualquier valor del índice de calor de más de 137°F(58.3\u2103) podría sobrestimar <i>cuánto calor se siente</i>. Para obtener más información, consulte las preguntas frecuentes.</string>
+
+    <string name="fahrenheitsymbol">\u2109</string>
+    <string name="celsiussymbol">\u2103</string>
+    <string name="txtMinimalRisk">Con un índice de calor &lt;60\u2109 (15.6"\u2103), casi no hay riesgo de enfermedad relacionada con el calor a menos que las tareas impliquen PPE y/o esfuerzo físico extremo.</string>
+    <string name="txtLowRisk">Las condiciones son potencialmente peligrosas.</string>
+    <string name="txtModerateRisk">Condiciones de mayor riesgo de enfermedad por calor.</string>
+    <string name="txtHighRisk">Condiciones de posible peligro.</string>
+    <string name="txtExtremeRisk">¡Las condiciones son peligrosas!</string>
+
+    <string name="txtExtremeRiskAlert">AVISO: Cualquier valor del índice de calor de más de 137 °F (58.3\u2103) podría sobrestimar cuánto calor se siente. Ver "\"preguntas frecuentes\".</string>
+    <string name="onethirtyseven">137</string>
+    <string name="fiftyeightthree">58.3</string>
+
+    <string name="humidityUnit">%</string>
+    <string name="location">Ubicación</string>
+    <string name="txtTemperature">Grados</string>
+    <string name="txtHumidity">Humedad</string>
+    <string name="txtAddressNotFound">No hemos podido encontrar una ubicación para esta entrada.</string>
+    <string name="txtNotification">Notificación</string>
+    <string name="txtNumOutOfRange">Fuera de Rango</string>
+    <string name="labelForCalculated">Calcula</string>
+    <string name="txtNoData">No hay Datos</string>
+    <string name="txtLocationPermissionGranted">Permiso concedido para usar la ubicación del dispositivo.</string>
+    <string name="txtLocationPermissionDenied">Se ha denegado el permiso para usar la ubicación del dispositivo.</string>
+    <string name="txtLocationPermissionNotice">Se ha denegado el permiso para usar la ubicación del Dispositivo.\n\nLa aplicación HEAT requiere la ubicación del dispositivo para recuperar la información de pronóstico del tiempo.\n\n¿Permitir permiso para usar la ubicación del dispositivo.</string>
+    <string name="txtAirplaneModeOn">Después de desactivar el modo avión, utilice el botón Atrás del dispositivo para volver a la aplicación de índice de calor.</string>
+    <string name="txtAirplaneModeOn_Title">Modo Avión está activado. ¿Desactivarlo ahora?</string>
+    <string name="txtNoNetwork">No se pueden recuperar datos meteorológicos. Verifique la configuración de red y deshabilite el Modo avión.</string>
+    <string name="txtNoNetwork_Title">Error de Accesibilidad</string>
+    <string name="txtNoGPS">Después de activa la red, use el dispositivo nuevo botón para volver a la aplicación del índice de calor.</string>
+    <string name="txtNoGPS_Title">Ubicación GPS no está habilitado. Habilitar ahora?</string>
+    <string name="txtUseCachedData">Datos del tiempo en la memoria caché está disponible. ¿Quieres usarlo ahora?</string>
+    <string name="txtNoLocation">Ubicación no disponible</string>
+    <string name="tutorialdismiss">Tutorial Final</string>
+    <string name="tutorialfinish">¡Lo Tengo!</string>
+    <string name="retry">Rever</string>
+    <string name="retrymessage">Haga clic en el botón volver a intentarlo para intentarlo de nuevo.</string>
+    <string name="txtabout">Sobre la Aplicación</string>
+    <string name="txtcontact">Contacto OSHA/NIOSH</string>
+    <string name="txtmoretips">Más Consejos</string>
+    <string name="txtriskfactors">Factores de Riesgo</string>
+    <string name="txtfaq">FAQ</string>
+    <string name="txtfaqlong">Preguntas Frecuentes</string>
+    <string name="txtcontactus">Contacto</string>
+    <string name="txtreminders">Recordatorios</string>
+    <string name="txttutorial">Toque este botón para aprender a utilizar esta aplicación.</string>
+    <string name="txttutorialintro">NIOSH OSHA herramienta de seguridad de calor tutorial. Deslice la pantalla para iniciar el tutorial. O pulse el botón End tutorial para iniciar el índice de calor</string>
+    <string name="txttutorialpage1">¿Qué es el índice de calor? Una medida de cómo se siente la temperatura cuando se tiene en cuenta la humedad relativa y la temperatura actual del aire.</string>
+    <string name="txttutorialpage2">Su ubicación se usa para determinar la temperatura actual y la humedad. Toque aquí para ingresar una nueva ubicación. Toque las casillas de temperatura y humedad para cambiar los valores y calcular el índice de calor.</string>
+    <string name="txttutorialpage3">Nivel de riesgo y medida del índice de calor. Toque para actualizar. Toque para ver las precauciones para el nivel actual de riesgo.</string>
+    <string name="txttutorialpage4">Use la vista de índice de calor por hora para planificar la actividad en exteriores. Este es el final del tutorial. Presione el botón Finalizar para empezar a índice de calor</string>
+    <string name="txtnoarraydata">No hay información en este momento.</string>
+    <string name="txttodaynowsentencepart1">A la hora</string>
+    <string name="txttodaynowsentencepart2">, la sensación térmica es de</string>
+    <string name="txttodaynowsentencepart3">grados Fahrenheit y el nivel actual de riesgo es</string>
+    <string name="txttodaynowsentencepart3celsius">grados centígrados y el nivel de amenaza actual es</string>
+    <string name="txttodaylatersentencepart1">A la hora</string>
+    <string name="txttodaylatersentencepart2">, la sensación térmica sea de</string>
+    <string name="txttodaylatersentencepart3">grados Fahrenheit y el nivel de riesgo sea</string>
+    <string name="txttodaylatersentencepart3celsius">grados centígrados y el nivel de riesgo se prevé que</string>
+    <string name="txtheatindexsentencepart1">Índice de calor para</string>
+    <string name="txtheatindexsentencepart1_1">En el momento</string>
+    <string name="txtheatindexsentencepart2">, la temperatura es de </string>
+    <string name="txtheatindexsentencepart3">Grados Fahrenheit, y la humedad relativa es</string>
+    <string name="txtheatindexsentencepart3celsius">Grados centígrados, y la humedad relativa es</string>
+    <string name="txtheatindexsentencepart4">por ciento. La sensación térmica es de</string>
+    <string name="txtheatindexsentencepart5">grados y el nivel actual de riesgo es</string>
+    <string name="txtheatindexsentencepart5celsius">grados centígrados y el nivel de amenaza actual es</string>
+    <string name="txtheatindexmanualsentencepart1">Con la temperatura en el</string>
+    <string name="txtheatindexmanualsentencepart2">Grados Fahrenheit, y la humedad relativa</string>
+    <string name="txtheatindexmanualsentencepart2celsius">Grados centígrados, y la humedad relativa</string>
+    <string name="txtheatindexmanualsentencepart3">por ciento, la temperatura se calcula como</string>
+    <string name="txtheatindexmanualsentencepart4">Grados Fahrenheit y el nivel de amenaza se calcula</string>
+    <string name="txtheatindexmanualsentencepart4celsius">grados centígrados y el nivel de riesgo se calcula para ser</string>
+    <string name="txtMinimal">Mínimo</string>
+    <string name="txtLow">Bajo</string>
+    <string name="txtModerate">Moderar</string>
+    <string name="txtHigh">Alto</string>
+    <string name="txtExtreme">Extremo</string>
+    <string name="txtHydration">Hidratación &amp; Resto</string>
+    <string name="txtTimeHydratRest">Tiempo para hidratar y descansar</string>
+    <string name="txtemoji_title">&#x2600; Tiempo para hidratar y descansar</string>
+
+    <string name="txtChooseTimes">Elija los tiempos de recordatorio:</string>
+
+    <string name="lowTitle">Requisitos de dispositivo insuficientes</string>
+    <string name="lowDesc">Es posible que la aplicación de Índice de Calor no funcione correctamente porque su dispositivo no cumple los requisitos mínimos de especificación.</string>
+    <string name="lowSubTitle">Requisitos Mínimos del Dispositivo</string>
+    <string name="osLabel">OS Version:</string>
+    <string name="osText">Android v4.3 (Jelly Bean)</string>
+    <string name="memLabel">Memory:</string>
+    <string name="memText">1GB RAM</string>
+    <string name="lowButtonText">Entiendo. Continuar.</string>
+    <string name="hourlycarousel_desc">Desliza el dedo hacia la izquierda o hacia la derecha para mostrar el índice de calor y el nivel de amenaza para cada hora.</string>
+    <string name="aboutthisappbtn_desc">Presiona este botón para obtener más información sobre esta aplicación.</string>
+    <string name="contactinfobtn_desc">Toque este botón para obtener información de contacto.</string>
+    <string name="moretipsbtn_desc">Toque este botón para obtener más consejos de seguridad.</string>
+    <string name="riskfactorsbtn_desc">Toque este botón para ver los factores de riesgo adicionales.</string>
+
+    <string name="reminderbtn_desc">Toque este botón para configurar recordatorios de hidratación.</string>
+    <string name="txtreminder">Recordatorios</string>
+
+    <string name="faqbtn_desc">Presiona este botón para preguntas frecuentes.</string>
+    <string name="multipurposebtn_desc">Toque este botón para ver las precauciones relacionadas con este nivel de amenaza.</string>
+    <string name="retrybtn_desc">Toque este botón para volver a intentar obtener los datos del índice de calor.</string>
+    <string name="editlocation_desc">Ingresa el nombre, la dirección o el código postal de la ubicación.</string>
+    <string name="location_label">Ubicación</string>
+    <string name="editTemperature_desc">Introduzca la temperatura en grados Fahrenheit.</string>
+    <string name="editTemperature_desc_cels">Ingrese la temperatura en grados Celsius.</string>
+    <string name="temperature_label">Grado Temperatura</string>
+    <string name="humidity_label">Porcentaje de humedad</string>
+    <string name="editHumidity_desc">Ingresar porcentaje de humedad.</string>
+    <string name="txtFor">Para</string>
+    <string name="txtContactNoEmergency">La siguiente información de contacto no es para situaciones de emergencia</string>
+    <string name="txtNotFound">Extraviado</string>
+    <string name="txtSettings">Ajustes</string>
+    <string name="settingsbtn_desc">Presiona este botón para configurar la preferencia de la aplicación.</string>
+    <string name="txtFAQ">Preguntas</string>
+    <string name="FAQbtn_desc">Toque este botón para preguntas más frecuentes.</string>
+    <string name="title_activity_settings">Configuración</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_title_celsius">Celsius</string>
+    <string name="pref_description_celsius">Mostrar las lecturas en grados en lugar de Fahrenheit</string>
+    <string name="pref_title_cache">Permitir Datos Más Antiguos</string>
+    <string name="pref_description_cache">Permitir datos almacenados en caché (hasta 12 horas de antigüedad) cuando no hay nuevos datos disponibles</string>
+    <string name="txtusingcache">Está utilizando datos antiguos en caché de su última ubicación especificada en línea.</string>
+    <string name="txtpoint">punto</string>
+    <string name="hint_location_edittext">Lugar, Dirección o Código Postal</string>
+    <string name="label_usecurrent_btn">Usar Ubicación Actual</string>
+    <string name="notify_location_edittext">Por favor, introduzca una ubicación, dirección o código postal.</string>
+    <string name="alert_locationNotFound_Title">Error de ubicación personalizada.</string>
+    <string name="txtLocationNotFound">No se puede obtener la ubicación del dispositivo. Consultar disponibilidad de WIFI.</string>
+    <string name="about_settings">Esta pantalla le permite habilitar las lecturas de grado Celsius y permitir el uso de datos antiguos de hasta 12 horas de antigüedad.</string>
+    <string name="btn_save_settings">Hecho</string>
+    <string name="alert_celsius_on">Si pulsa OK, se activarán las lecturas en grados Celsius.</string>
+    <string name="alert_celsius_enabled">Grados Celsius lecturas habilitadas.</string>
+    <string name="alert_celsius_off">Al pulsar OK se desactivarán los grados Celsius.</string>
+    <string name="alert_celsius_disabled">Grados Celsius lecturas deshabilitadas.</string>
+    <string name="alert_cache_on">Al pulsar OK se permitirá el uso de datos antiguos cuando no haya nuevos datos disponibles.</string>
+    <string name="alert_cache_enabled">Permitir que los datos antiguos estén habilitados.</string>
+    <string name="alert_cache_off">Pulsando Aceptar desactivará el uso de datos antiguos.</string>
+    <string name="alert_cache_disabled">Permitir que los datos antiguos se desactiven.</string>
+    <string name="settings_done_btn">Presiona para volver a Más info.</string>
+    <string name="alert_celsius_title_on">¿Quieres encender Celsius?</string>
+    <string name="alert_celsius_title_off">¿Desea desactivar Celsius?</string>
+    <string name="alert_cache_title_on">¿Desea activar Permitir datos antiguos?</string>
+    <string name="alert_cache_title_off">¿Desea desactivar Permitir datos antiguos?</string>
+    <string name="alert_temp_outrange">El valor del grado está fuera del rango</string>
+    <string name="alert_humidity_outrange">El valor de humedad está fuera de rango</string>
+    <string name="alert_nonetwork_enablecache">La red no está disponible. Para ver los datos almacenados en caché, habilite <b>Permitir datos más antiguos</b> en <b>Más info Configuración</b>.</string>
+    <string name="alert_nonetwork_enablecache_msg">La red no está disponible. Para ver los datos almacenados en caché, habilite Permitir datos más antiguos en Más info Configuración.</string>
+    <string name="alert_nonetwork_nocache_msg">La red no está disponible. Actualmente no hay información meteorológica disponible en caché disponible en este momento.</string>
+
+    <string name="alert_ServerOutage_Title">Error del tiempo de la NOAA</string>
+    <string name="txtServerOutage">Actualmente, la Oficina Nacional de Administración Oceánica y Atmosférica (NOAA, por sus siglas en inglés) está teniendo problemas con la fuente de datos que usa para su aplicación. La NOAA está trabajando para resolver estos problemas.</string>
+
+
+    <string name="alert_changed_msg_title">Cambios Realizados</string>
+    <string name="alert_changed_msg_text">Has hecho cambios. ¿Quieres actualizar tus recordatorios?</string>
+    <string name="alert_changed_msg_cleartext">Has deseleccionado todos los días. ¿Quieres borrar tus recordatorios?</string>
+    <string name="alert_unfinished_msg_text">Has hecho cambios. ¿Desea completar la configuración de su recordatorio?</string>
+
+    <integer-array name="img_id_arr">
+        <item>@drawable/slide1_es</item>
+        <item>@drawable/slide2_es</item>
+        <item>@drawable/slide3_es</item>
+        <item>@drawable/slide4_es</item>
+    </integer-array>
+
+    <string name="reminder_interval_title">Elige el intervalo:</string>
+    <string name="fifteen">15 minutos</string>
+    <string name="contdesc_fifteen">Recuérdame cada 15 minutos</string>
+    <string name="thirty">30 minutos</string>
+    <string name="contdesc_thirty">Recuérdame cada 30 minutos</string>
+    <string name="sixty">60 minutos</string>
+    <string name="contdesc_sixty">Recuérdame cada 60 minutos</string>
+    <string name="selected">Seleccionado</string>
+    <string name="setbutton">Conjunto</string>
+    <string name="clearbutton">Claro</string>
+    <string name="starttime">Hora de Inicio</string>
+    <string name="contdesc_startime">Seleccione una Hora de Inicio</string>
+    <string name="endtime">Hora de Finalización</string>
+    <string name="contdesc_endtime">Seleccione una Hora de Finalización</string>
+    <string name="contdesc_startpicker">Elige una Hora de Inicio</string>
+    <string name="contdesc_endpicker">Elige una Hora de Finalización</string>
+    <string name="dow">Elija el Día(s) de la Semana:</string>
+    <string name="contdesc_dow">Recuérdame los Días de la Semana</string>
+    <string name="sunday">S</string>
+    <string name="contdesc_sunday">Domingo</string>
+    <string name="monday">M</string>
+    <string name="contdesc_monday">Lunes</string>
+    <string name="tuesday">T</string>
+    <string name="contdesc_tuesday">Martes</string>
+    <string name="wednesday">W</string>
+    <string name="contdesc_wednesday">Miércoles</string>
+    <string name="thursday">T</string>
+    <string name="contdesc_thursday">Jueves</string>
+    <string name="friday">F</string>
+    <string name="contdesc_friday">Viernes</string>
+    <string name="saturday">S</string>
+    <string name="contdesc_saturday">Sábado</string>
+    <string name="startup_timetext">Hora de Inicio: 12:00 PM\nHora de Finalización: 12:00 PM</string>
+    <string name="txtCalendarPermissionGranted">Permiso otorgado para usar el calendario del dispositivo.</string>
+    <string name="txtCalendarPermissionDenied">Permiso denegado para usar el calendario del dispositivo.</string>
+    <string name="txtCalendarPermissionNotice">Se ha denegado el permiso para utilizar el calendario del dispositivo.\n\nLa aplicación HEAT requiere el calendario para crear y administrar eventos del calendario.\n\nPermitir permiso para usar el calendario del dispositivo.</string>
+
+    <string name="msg_title_set">Set de Recordatorios</string>
+    <string name="msg_prompt_set">Vuelva a esta pantalla para borrar los recordatorios. Se agregaron recordatorios de hidratación cada</string>
+    <string name="msg_title_clear">Recordatorios Borrados</string>
+    <string name="msg_prompt_clear">Todos los recordatorios de hidratación han sido borrados.</string>
+
+    <string name="Reminders_set_text_dow">Establecer recordatorios cada</string>
+    <string name="Reminders_set_text_interval">minutos de diferencia,</string>
+    <string name="Reminders_set_text_start">desde</string>
+    <string name="Reminders_set_text_end">a</string>
+
+    <string name="Reminders_banner_text">Establecer Recordatorios</string>
+    <string name="Reminders_banner_desc">Esta pantalla le permite programar recordatorios de hidratación.</string>
+
+    <string name="txtenglish">Ingles</string>
+    <string name="txtspanish">En Español</string>
+
+    <string name="txtSummary">Seleccione un día de la semana para el recordatorio de hidratación</string>
+
+</resources>

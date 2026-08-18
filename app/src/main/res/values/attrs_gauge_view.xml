@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="GaugeView">
+        <attr name="needle" format="float" />
+        <attr name="feelsLikeTemp" format="string" />
+        <attr name="spanish" format="boolean" />
+        <attr name="time" format="string" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,265 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">HEAT</string>
+    <string name="hi_btn_text">Heat Index</string>
+
+    <string name="txtminimal">Minimal</string>
+    <string name="txtcaution">Caution</string>
+    <string name="txtwarning">Warning</string>
+    <string name="txtdanger">Danger</string>
+
+    <string name="txtsplashscreen">OSHA NIOSH Heat Safety Tool</string>
+    <string name="txtgood">Operating System is good</string>
+    <string name="txtgoodmem">System memory is good</string>
+
+    <string name="ua_banner_text">Terms of Use</string>
+    <string name="ua_banner_desc">This screen displays the User Agreement terms of use.</string>
+    <string name="ua_text">The material embodied in this software is provided to you "as-is" and without warranty of any kind, express, implied or otherwise, including without limitation, any warranty of fitness for a particular purpose. In no event shall the Centers for Disease Control and Prevention (CDC) or the United States (U.S.) government be liable to you or anyone else for any direct, special, incidental, indirect or consequential damages of any kind, or any damages whatsoever, including without limitation, loss of profit, loss of use, savings or revenue, or the claims of third parties, whether or not CDC or the U.S. government has been advised of the possibility of such loss, however caused and on any theory of liability, arising out of or in connection with the possession, use or performance of this software.</string>
+    <string name="ua_button_text">I Agree</string>
+    <string name="ua_button_desc">I Agree to terms of use</string>
+
+    <string name="hi_banner_text">Heat Index</string>
+    <string name="hi_banner_desc">This screen displays the current heat index for your location.</string>
+    <string name="today_btn_text">Hourly</string>
+    <string name="today_banner_text">Hourly Index</string>
+    <string name="today_banner_desc">This screen displays hourly heat index information as it is predicted to change throughout the day.</string>
+    <string name="symptoms_btn_text">Symptoms</string>
+    <string name="symptoms_banner_text">Signs &#038; Symptoms</string>
+    <string name="symptoms_banner_desc">This screen details the signs and symptoms for heat related illnesses.</string>
+    <string name="firstaid_btn_text">First Aid</string>
+    <string name="firstaid_banner_text">First Aid</string>
+    <string name="firstaid_banner_desc">This screen displays first aid information for heat related illness.</string>
+    <string name="more_btn_text">More</string>
+    <string name="more_banner_text">More Info</string>
+    <string name="more_banner_desc">This page offers additional information about the app as well as contact information, more tips, risk factors, frequently asked questions and preference settings.</string>
+    <string name="hi_noservice_message">Could not get weather data. Check the network settings and deactivate airplane mode.</string>
+    <string name="reachabilityerror">Reachability Error</string>
+    <string name="heat_index_gauge">Heat Index Gauge</string>
+    <string name="hi_precations_btn_text">Precautions</string>
+    <string name="hi_allpurpose_btn_minrisk">More Info</string>
+
+    <string name="greaterthan">\u003E</string>
+    <string name="notice">Notice</string>
+    <string name="heatnoticealert_F">Although this heat index (HI) is accurately classified in the Danger risk level with appropriate additional precautions needed, any HI value above 137°F (58.3\u2103) may be an overestimation for how hot it feels. See FAQ for more information.</string>
+    <string name="heatnoticealert_C">Although this heat index (CI) is accurately classified in the Danger risk level with appropriate additional precautions needed, any HI value above 137°F (58.3\u2103) may be an overestimation for how hot it feels. See FAQ for more information.</string>
+
+    <string name="fahrenheitsymbol">\u2109</string>
+    <string name="celsiussymbol">\u2103</string>
+    <string name="txtMinimalRisk">At a heat index &lt;60\u2109 (15.6"\u2103), there is almost no risk of heat-related illness unless tasks involve PPE and/or extreme physical exertion.</string>
+    <string name="txtLowRisk">Conditions are potentially dangerous.</string>
+    <string name="txtModerateRisk">Increased risk for heat-related illness.</string>
+    <string name="txtHighRisk">Conditions are hazardous.</string>
+    <string name="txtExtremeRisk">Conditions are dangerous!</string>
+
+    <string name="txtExtremeRiskAlert">NOTICE: Any heat index value above 137°F (58.3\u2103) may overestimate how hot it feels. See FAQ.</string>
+    <string name="onethirtyseven">137</string>
+    <string name="fiftyeightthree">58.3</string>
+
+    <string name="humidityUnit">%</string>
+    <string name="location">Location:</string>
+    <string name="txtTemperature">Degrees</string>
+    <string name="txtHumidity">Humidity</string>
+    <string name="txtAddressNotFound">We were unable to find a location for this entry.</string>
+    <string name="txtNotification">Notification</string>
+    <string name="txtNumOutOfRange">Out of Range</string>
+    <string name="labelForCalculated">Calculated</string>
+    <string name="txtNoData">No Data</string>
+    <string name="txtLocationPermissionGranted">Permission granted to use Device location.</string>
+    <string name="txtLocationPermissionDenied">Permission denied to use Device location.</string>
+    <string name="txtLocationPermissionNotice">Permission has been denied to use the Device location.\n\nThe HEAT application requires the Device location to retrieve weather forecast information.\n\nAllow permission to use the Device location.</string>
+    <string name="txtAirplaneModeOn">After Airplane Mode is disabled, use the device Back button to return to the Heat Index application.</string>
+    <string name="txtAirplaneModeOn_Title">Airplane Mode is Enabled. Disable it now?</string>
+    <string name="txtNoNetwork">Unable to retrieve weather data. Check network settings and disable Airplane Mode.</string>
+    <string name="txtNoNetwork_Title">Reachability Error</string>
+    <string name="txtNoGPS">After Network is enabled, use the device Back button to return to the Heat Index application.</string>
+    <string name="txtNoGPS_Title">Location GPS is not Enabled. Enable it now?</string>
+    <string name="txtUseCachedData">Cached Weather Data is available. Would you like to use it now?</string>
+    <string name="txtNoLocation">Location not available</string>
+    <string name="tutorialdismiss">End Tutorial</string>
+    <string name="tutorialfinish">Got it!</string>
+    <string name="retry">Retry</string>
+    <string name="retrymessage">Click the retry button to try again.</string>
+    <string name="txtabout">About This App</string>
+    <string name="txtcontact">Contact OSHA/NIOSH</string>
+    <string name="txtmoretips">More Tips</string>
+    <string name="txtriskfactors">Risk Factors</string>
+    <string name="txtfaq">FAQ</string>
+    <string name="txtfaqlong">Frequently Asked Questions</string>
+    <string name="txtcontactus">Contact Us</string>
+    <string name="txtreminders">Reminders</string>
+    <string name="txttutorial">Tap this button to learn how to use this app.</string>
+    <string name="txttutorialintro">NIOSH OSHA Heat Safety Tool tutorial. Swipe the screen to start the tutorial. Or press the end tutorial button to start Heat Index</string>
+    <string name="txttutorialpage1">What is the heat index? A measure of how hot it feels when relative humidity is taken into account with actual air temperature.</string>
+    <string name="txttutorialpage2">Your location is used to determine current temperature and humidity. Tap here to enter a new location. Tap the temperature and humidity boxes to change their values and calculate the resulting heat index.</string>
+    <string name="txttutorialpage3">Threat level and heat index gauge. Tap to refresh. Tap to view precautions for the current threat level.</string>
+    <string name="txttutorialpage4">Use the hourly heat index view to plan outdoor activity.  This is the end of the tutorial. Press the finish button to start heat index</string>
+    <string name="txtnoarraydata">There is no data at this time.</string>
+    <string name="txttodaynowsentencepart1">At the hour</string>
+    <string name="txttodaynowsentencepart2">, the temperature feels like</string>
+    <string name="txttodaynowsentencepart3">degrees Fahrenheit and the current threat level is</string>
+    <string name="txttodaynowsentencepart3celsius">degrees celsius and the current threat level is</string>
+    <string name="txttodaylatersentencepart1">At the hour</string>
+    <string name="txttodaylatersentencepart2">, the temperature is predicted to feel like</string>
+    <string name="txttodaylatersentencepart3">degrees Fahrenheit and the threat level is predicted to be</string>
+    <string name="txttodaylatersentencepart3celsius">degrees celsius and the threat level is predicted to be</string>
+    <string name="txtheatindexsentencepart1">Heat Index for</string>
+    <string name="txtheatindexsentencepart1_1">At the time</string>
+    <string name="txtheatindexsentencepart2">, the temperature is</string>
+    <string name="txtheatindexsentencepart3">degrees Fahrenheit, and the relative humidity is</string>
+    <string name="txtheatindexsentencepart3celsius">degrees Celsius, and the relative humidity is</string>
+    <string name="txtheatindexsentencepart4">percent. The temperature feels like</string>
+    <string name="txtheatindexsentencepart5">degrees Fahrenheit and the current threat level is</string>
+    <string name="txtheatindexsentencepart5celsius">degrees Celsius and the current threat level is</string>
+    <string name="txtheatindexmanualsentencepart1">With the temperature at</string>
+    <string name="txtheatindexmanualsentencepart2">degrees Fahrenheit, and the relative humidity at</string>
+    <string name="txtheatindexmanualsentencepart2celsius">degrees Celsius, and the relative humidity at</string>
+    <string name="txtheatindexmanualsentencepart3">percent, the temperature is calculated to feel like</string>
+    <string name="txtheatindexmanualsentencepart4">degrees Fahrenheit and the threat level is calculated to be</string>
+    <string name="txtheatindexmanualsentencepart4celsius">degrees celsius and the threat level is calculated to be</string>
+    <string name="txtMinimal">Minimal</string>
+    <string name="txtLow">Low</string>
+    <string name="txtModerate">Moderate</string>
+    <string name="txtHigh">High</string>
+    <string name="txtExtreme">Extreme</string>
+    <string name="txtHydration">Hydration &amp; Rest</string>
+    <string name="txtTimeHydratRest">Time to hydrate &amp; rest</string>
+    <string name="txtemoji_title">&#x2600; Time to hydrate &amp; rest</string>
+    <string name="txtChooseTimes">Choose the reminder times:</string>
+    <string name="lowTitle">Insufficient Device Requirements</string>
+    <string name="lowDesc">The Heat Index application may not perform correctly because your device does not meet the minimum specification requirements.</string>
+    <string name="lowSubTitle">Device Minimum Requirements</string>
+    <string name="osLabel">OS Version:</string>
+    <string name="osText">Android v4.3 (Jelly Bean)</string>
+    <string name="memLabel">Memory:</string>
+    <string name="memText">1GB RAM</string>
+    <string name="lowButtonText">I understand. Continue anyway.</string>
+    <string name="hourlycarousel_desc">Swipe left or right to display the heat index and threat level for each hour.</string>
+    <string name="aboutthisappbtn_desc">Tap this button to learn more about this app.</string>
+    <string name="contactinfobtn_desc">Tap this button for contact information.</string>
+    <string name="moretipsbtn_desc">Tap this button to learn more safety tips.</string>
+    <string name="riskfactorsbtn_desc">Tap this button for additional risk factors.</string>
+    <string name="reminderbtn_desc">Tap this button to set hydration Calendar Events.</string>
+    <string name="txtreminder">Reminders</string>
+    <string name="faqbtn_desc">Tap this button for frequently asked questions.</string>
+    <string name="multipurposebtn_desc">Tap this button for precautions related to this threat level.</string>
+    <string name="retrybtn_desc">Tap this button to retry getting Heat Index data.</string>
+    <string name="editlocation_desc">Enter location name, address or zip code.</string>
+    <string name="location_label">Location</string>
+    <string name="editTemperature_desc">Enter temperature in Fahrenheit degrees.</string>
+    <string name="editTemperature_desc_cels">Enter temperature in Celsius degrees.</string>
+    <string name="temperature_label">Degree Temperature</string>
+    <string name="humidity_label">Percent Humidity</string>
+    <string name="editHumidity_desc">Enter percentage humidity.</string>
+    <string name="txtFor">For</string>
+    <string name="txtContactNoEmergency">The following contact information is not for emergency situations.</string>
+    <string name="txtNotFound">Not Found</string>
+    <string name="txtSettings">Settings</string>
+    <string name="settingsbtn_desc">Tap this button for application preference settings.</string>
+    <string name="txtFAQ">FAQ</string>
+    <string name="FAQbtn_desc">Tap this button for frequently asked questions.</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_title_celsius">Celsius</string>
+    <string name="pref_description_celsius">Display readings in degrees Celsius instead of Fahrenheit</string>
+    <string name="pref_title_cache">Allow Older Data</string>
+    <string name="pref_description_cache">Allow older data (up to 12 hours old) when new data is not available</string>
+    <string name="txtusingcache">You are using cached older data from your last online specified Location.</string>
+    <string name="txtpoint">point</string>
+    <string name="hint_location_edittext">Location, Address or Zip Code</string>
+    <string name="label_usecurrent_btn">Use Current Location</string>
+    <string name="notify_location_edittext">Please enter a location, address or zip code</string>
+    <string name="alert_locationNotFound_Title">Custom Location Error</string>
+    <string name="about_settings">This screen allows you to enable degree Celsius readings, and enable use of older data up to 12 hours old.</string>
+    <string name="btn_save_settings">Done</string>
+    <string name="alert_celsius_on">Tapping OK will enable degrees Celsius readings.</string>
+    <string name="alert_celsius_enabled">Degrees Celsius readings enabled.</string>
+    <string name="alert_celsius_off">Tapping OK will disable degrees Celsius readings.</string>
+    <string name="alert_celsius_disabled">Degrees Celsius readings disabled.</string>
+    <string name="alert_cache_on">Tapping OK will allow use of older data when new data is not available.</string>
+    <string name="alert_cache_enabled">Allow older data enabled.</string>
+    <string name="alert_cache_off">Tapping OK will disable use of older data.</string>
+    <string name="alert_cache_disabled">Allow older data disabled.</string>
+    <string name="settings_done_btn">Tap to return to More Info.</string>
+    <string name="alert_celsius_title_on">Do you want to turn on Celsius?</string>
+    <string name="alert_celsius_title_off">Do you want to turn off Celsius?</string>
+    <string name="alert_cache_title_on">Do you want to turn on Allow Older Data?</string>
+    <string name="alert_cache_title_off">Do you want to turn off Allow Older Data?</string>
+    <string name="alert_temp_outrange">Degree value is out of range</string>
+    <string name="alert_humidity_outrange">Humidity value is out of range</string>
+    <string name="alert_nonetwork_enablecache">The network is unavailable. To view cached data, enable <b>Allow Older Data</b> in <b>More Info Settings</b>.</string>
+    <string name="alert_nonetwork_enablecache_msg">The network is unavailable. To view cached data, enable Allow Older Data in More Info Settings.</string>
+    <string name="alert_nonetwork_nocache_msg">The network is unavailable. There is currently no cached older weather data available at this time.</string>
+    <string name="alert_changed_msg_title">Changes Made</string>
+    <string name="alert_changed_msg_text">You have made changes. Do you want to update your reminders?</string>
+    <string name="alert_changed_msg_cleartext">You have unselected all days. Do you want to clear your reminders?</string>
+    <string name="alert_unfinished_msg_text">You have made changes. Do you want to complete setting your reminder?</string>
+
+    <string name="alert_NoLocationFound_Title">Internet Access Error</string>
+    <string name="txtLocationNotFound">Unable to obtain device location. Check WIFI availability.</string>
+
+    <string name="alert_ServerOutage_Title">NOAA Weather Error</string>
+    <string name="txtServerOutage">Currently, the National Oceanic and Atmospheric Administration (NOAA) is having issues with the data source used by this app. They are working to resolve these issues.</string>
+
+    <integer-array name="img_id_arr">
+        <item>@drawable/slide1</item>
+        <item>@drawable/slide2</item>
+        <item>@drawable/slide3</item>
+        <item>@drawable/slide4</item>
+    </integer-array>
+
+    <string name="reminder_interval_title">Choose the interval:</string>
+    <string name="fifteen">15 minutes</string>
+    <string name="contdesc_fifteen">Remind me every 15 minutes</string>
+    <string name="thirty">30 minutes</string>
+    <string name="contdesc_thirty">Remind me every 30 minutes</string>
+    <string name="sixty">60 minutes</string>
+    <string name="contdesc_sixty">Remind me every 60 minutes</string>
+    <string name="selected">selected</string>
+    <string name="setbutton">Set</string>
+    <string name="clearbutton">Clear</string>
+    <string name="starttime">Start Time</string>
+    <string name="contdesc_startime">Select a Start Time</string>
+    <string name="endtime">End Time</string>
+    <string name="contdesc_endtime">Select an End Time</string>
+    <string name="contdesc_startpicker">Pick a Start Time</string>
+    <string name="contdesc_endpicker">Pick an End Time</string>
+    <string name="dow">Remind me on Days</string>
+    <string name="contdesc_dow">Choose the Day(s) of the Week:</string>
+    <string name="sunday">S</string>
+    <string name="contdesc_sunday">Sunday</string>
+    <string name="monday">M</string>
+    <string name="contdesc_monday">Monday</string>
+    <string name="tuesday">T</string>
+    <string name="contdesc_tuesday">Tuesday</string>
+    <string name="wednesday">W</string>
+    <string name="contdesc_wednesday">Wednesday</string>
+    <string name="thursday">T</string>
+    <string name="contdesc_thursday">Thursday</string>
+    <string name="friday">F</string>
+    <string name="contdesc_friday">Friday</string>
+    <string name="saturday">S</string>
+    <string name="contdesc_saturday">Saturday</string>
+    <string name="startup_timetext">Start Time: 12:00 PM\nEnd Time: 12:00 PM</string>
+    <string name="txtCalendarPermissionGranted">Permission granted to use Device Calendar.</string>
+    <string name="txtCalendarPermissionDenied">Permission denied to use Device Calendar.</string>
+    <string name="txtCalendarPermissionNotice">Permission has been denied to use the Device Calendar.\n\nThe HEAT application requires the Calendar to create and manage Calendar Events.\n\nAllow permission to use the Device Calendar.</string>
+
+
+    <string name="msg_title_set">Reminders Set</string>
+    <string name="msg_prompt_set">Return to this screen to clear reminders. Hydration reminders were added every</string>
+    <string name="msg_title_clear">Reminders Cleared</string>
+    <string name="msg_prompt_clear">All hydration reminders have been cleared.</string>
+
+    <string name="Reminders_set_text_dow">Set Calendar Events every</string>
+    <string name="Reminders_set_text_interval">minutes apart,</string>
+    <string name="Reminders_set_text_start">from</string>
+    <string name="Reminders_set_text_end">to</string>
+
+    <string name="Reminders_banner_text">Set Reminders</string>
+    <string name="Reminders_banner_desc">This screen allows to schedule Hydration Reminders.</string>
+
+    <string name="txtenglish">English</string>
+    <string name="txtspanish">En Español</string>
+
+    <string name="txtSummary">Select a day of the week for the hydration reminder</string>
+
+</resources>

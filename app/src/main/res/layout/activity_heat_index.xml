@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<erg.com.nioshheatindex.Zoomlayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/zoomLayout"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="erg.com.nioshheatindex.HeatIndexActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="erg.com.nioshheatindex.HeatIndexActivity">
+
+        <ImageView
+            android:id="@+id/imageViewHeatIndexTopPic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/hi_banner_desc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/heatindex"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/imageViewTextHeatIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
+            android:text="@string/hi_banner_text"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewHeatIndexTopPic"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/txttutorial"
+            android:scaleType="centerCrop"
+            android:src="@drawable/helpbutton"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewHeatIndexTopPic"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewHeatIndexTopPic"/>
+
+        <ImageButton
+            android:id="@+id/btnReminders"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/txtreminders"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/btnHome"
+            app:layout_constraintEnd_toStartOf="@+id/btnHome"
+            app:layout_constraintTop_toTopOf="@+id/btnHome"
+            app:srcCompat="@drawable/reminder_button"/>
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/geo"
+            android:ems="10"
+            android:hint="@string/hint_location_edittext"
+            android:imeOptions="actionGo"
+            android:inputType="textPostalAddress"
+            android:padding="8dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewHeatIndexTopPic"
+            tools:ignore="Autofill"/>
+
+        <EditText
+            android:id="@+id/temp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/temp"
+            android:ems="10"
+            android:hint="@string/txtTemperature"
+            android:inputType="phone"
+            android:padding="8dp"
+            android:textSize="18sp"
+            tools:ignore="Autofill"
+            app:layout_constraintEnd_toStartOf="@+id/humidity"
+            app:layout_constraintStart_toStartOf="@+id/location"
+            app:layout_constraintTop_toBottomOf="@+id/location"/>
+
+        <EditText
+            android:id="@+id/humidity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/humidity"
+            android:ems="10"
+            android:hint="@string/txtHumidity"
+            android:inputType="number"
+            android:padding="8dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/location"
+            app:layout_constraintStart_toEndOf="@+id/temp"
+            app:layout_constraintTop_toBottomOf="@+id/location"
+            tools:ignore="Autofill"/>
+
+        <view
+            android:id="@+id/view"
+            class="erg.com.nioshheatindex.GaugeView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/heat_index_gauge"
+            android:onClick="refreshActivity"
+            app:feelsLikeTemp="--"
+            app:layout_constraintBottom_toTopOf="@+id/btnAP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/temp"
+            app:needle="0"
+            app:spanish="false"
+            app:time="--" />
+
+        <Button
+            android:id="@+id/btnAP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/minimal"
+            android:contentDescription="@string/multipurposebtn_desc"
+            android:text="@string/hi_allpurpose_btn_minrisk"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="normal"
+
+            app:layout_constraintBottom_toTopOf="@+id/tvMainText"
+
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/tvMainText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnAP"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnUseCurrent"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view" />
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/nav_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/btnUseCurrent"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/black"
+            android:text="@string/label_usecurrent_btn"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/include"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</erg.com.nioshheatindex.Zoomlayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:visibility="visible"
+    android:id="@+id/activity_start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loShowNeedPerms"
+        android:visibility="invisible"
+        >
+        <TextView
+            android:id="@+id/tvNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/txtLocationPermissionNotice"
+            android:padding="5sp"
+            android:text="@string/txtLocationPermissionNotice"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:visibility="visible"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/loShowNotice"
+        android:visibility="invisible"
+        >
+        <TextView
+            android:id="@+id/memTitle"
+            android:layout_width="match_parent"
+            android:layout_height="120sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/lowTitle"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/memNotice"
+            android:layout_width="match_parent"
+            android:layout_height="140sp"
+            android:layout_below="@id/memTitle"
+            android:text="@string/lowDesc"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/memNoticeSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/memNotice"
+            android:text="@string/lowSubTitle"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/memNoticeSubTitle"
+                android:stretchColumns="1">
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/OSLabel"
+                        android:layout_width="90dp"
+                        android:padding="3dip"
+                        android:text="@string/osLabel"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/OSText"
+                        android:layout_width="100dp"
+                        android:padding="3dip"
+                        android:text="@string/osText"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:id="@+id/ivOS"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="start"
+                        android:contentDescription="@string/txtgood"
+                        android:padding="3dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/good"/>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/MEMLabel"
+                        android:layout_width="90dp"
+                        android:padding="3dip"
+                        android:text="@string/memLabel"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/MEMText"
+                        android:layout_width="100dp"
+                        android:padding="3dip"
+                        android:text="@string/memText"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:id="@+id/ivMem"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="start"
+                        android:contentDescription="@string/txtgoodmem"
+                        android:padding="3dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/good"/>
+                </TableRow>
+            <Button
+                android:id="@+id/btnLow"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="4dp"
+                android:layout_marginBottom="60dp"
+                android:background="@color/minimal"
+                android:contentDescription="@string/lowButtonText"
+                android:padding="3dip"
+                android:text="@string/lowButtonText"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+
+

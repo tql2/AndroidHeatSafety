@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/navbar"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:layout_centerHorizontal="true"
+              android:background="@color/navbargray"
+              android:gravity="bottom|center|fill"
+              android:orientation="horizontal"
+              android:weightSum="5">
+
+    <Button
+        android:id="@+id/hiButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/heatbig"
+        android:text="@string/hi_btn_text"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/tdyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/clockbig"
+        android:text="@string/today_btn_text"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/sButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/symptomsbig"
+        android:text="@string/symptoms_btn_text"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/faButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/firstaidbig"
+        android:text="@string/firstaid_btn_text"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/mButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/morebig"
+        android:text="@string/more_btn_text"
+        android:textSize="10sp" />
+</LinearLayout>

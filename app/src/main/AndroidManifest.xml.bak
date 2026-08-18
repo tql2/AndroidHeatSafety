@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="erg.com.nioshheatindex">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"/>
+        <activity
+            android:name=".HeatIndexActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".TodayActivity"/>
+        <activity android:name=".SymptomsActivity"/>
+        <activity android:name=".FirstAidActivity"/>
+        <activity android:name=".MoreActivity"/>
+        <activity android:name=".WebViewActivity"/>
+        <activity android:name=".MoreInfoWebViewActivity"/>
+        <activity android:name=".StartActivity"/>
+        <activity android:name=".Settings"/>
+        <activity android:name=".InitializeReminders"/>
+        <activity android:name=".RemindersActivity"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+
+    </application>
+
+</manifest>

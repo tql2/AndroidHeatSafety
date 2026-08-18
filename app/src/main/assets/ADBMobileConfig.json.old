@@ -1,0 +1,28 @@
+{
+    "version" : "1.0",
+    "analytics" : {
+        "rsids" : "cdcsynd",
+        "server" : "cdc.sc.omtrdc.net",
+        "charset" : "UTF-8",
+        "ssl" : true,
+        "offlineEnabled" : false,
+        "lifecycleTimeout" : 300,
+        "referrerTimeout" : 0,
+        "batchLimit" : 0,
+        "privacyDefault" : "optedin",
+		"backdateSessionInfo" : false,
+        "poi" : []
+    },
+    "target" : {
+        "clientCode" : "",
+        "timeout" : 5
+    },
+    "audienceManager" : {
+		"server" : "",
+        "analyticsForwardingEnabled": false
+    },
+    "acquisition" : {
+		"server" : "c00.adobe.com",
+        "appid" : "b7c2a673786a707b7ae99ea3dd2339082f471cde48e8818dfd8ac4d49c2ee33e"
+    }
+}
