@@ -1,227 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<erg.com.nioshheatindex.Zoomlayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<erg.com.nioshheatindex.Zoomlayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/zoomLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/surface">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/surface">
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
 
-        <ImageView
-            android:id="@+id/imageViewMoreTopPic"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/moreHeaderCard"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/more_banner_desc"
-            android:scaleType="centerCrop"
-            android:src="@drawable/moreinfo"
-            app:layout_constraintBottom_toTopOf="parent"
+            android:layout_height="104dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/brand"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/imageViewTextMore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="2dp"
-            android:text="@string/more_banner_text"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewMoreTopPic"
-            app:layout_constraintStart_toStartOf="parent"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="20dp"
+                android:paddingEnd="8dp">
 
-        <ImageButton
-            android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|end"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="4dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/txttutorial"
-            android:scaleType="centerCrop"
-            android:src="@drawable/helpbutton"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewMoreTopPic"
-            app:layout_constraintEnd_toEndOf="@+id/imageViewMoreTopPic"/>
+                <TextView
+                    android:id="@+id/imageViewTextMore"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/more_banner_text"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/moreHeaderSubtitle"
+                    app:layout_constraintEnd_toStartOf="@id/btnReminders"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
 
-        <ImageButton
-            android:id="@+id/btnReminders"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginEnd="8dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/Reminders_banner_text"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="@+id/btnHome"
-            app:layout_constraintEnd_toStartOf="@+id/btnHome"
-            app:layout_constraintTop_toTopOf="@+id/btnHome"
-            app:srcCompat="@drawable/reminder_button"/>
+                <TextView
+                    android:id="@+id/moreHeaderSubtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/more_banner_desc"
+                    android:textColor="#C7EEF2"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnReminders"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewTextMore" />
+
+                <ImageButton
+                    android:id="@+id/btnReminders"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/Reminders_banner_text"
+                    android:padding="8dp"
+                    android:src="@drawable/reminder_button"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnHome"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btnHome"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/txttutorial"
+                    android:padding="8dp"
+                    android:src="@drawable/helpbutton"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewMoreTopPic"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/more_banner_desc" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <Button
             android:id="@+id/btnAbout"
+            style="@style/ModernMenuButton"
             android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/menu_item_background"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
             android:contentDescription="@string/aboutthisappbtn_desc"
             android:drawableStart="@drawable/abouticon"
             android:text="@string/txtabout"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textColor="@color/textPrimary"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:drawablePadding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/btnContact"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewMoreTopPic"/>
+            app:layout_constraintTop_toBottomOf="@id/moreHeaderCard" />
 
         <Button
             android:id="@+id/btnContact"
+            style="@style/ModernMenuButton"
             android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/menu_item_background"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
             android:contentDescription="@string/contactinfobtn_desc"
             android:drawableStart="@drawable/contacticon"
             android:text="@string/txtcontact"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textColor="@color/textPrimary"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:drawablePadding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/btnMoreDetails"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnAbout"/>
+            app:layout_constraintTop_toBottomOf="@id/btnAbout" />
 
         <Button
             android:id="@+id/btnMoreDetails"
+            style="@style/ModernMenuButton"
             android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/menu_item_background"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
             android:contentDescription="@string/moretipsbtn_desc"
             android:drawableStart="@drawable/moredetailsicon"
             android:text="@string/txtmoretips"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textColor="@color/textPrimary"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:drawablePadding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/btnRiskFactors"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnContact"/>
+            app:layout_constraintTop_toBottomOf="@id/btnContact" />
 
         <Button
             android:id="@+id/btnRiskFactors"
+            style="@style/ModernMenuButton"
             android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/menu_item_background"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
             android:contentDescription="@string/riskfactorsbtn_desc"
             android:drawableStart="@drawable/riskicon"
             android:text="@string/txtriskfactors"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textColor="@color/textPrimary"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:drawablePadding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/btnReminder"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnMoreDetails"/>
+            app:layout_constraintTop_toBottomOf="@id/btnMoreDetails" />
 
         <Button
             android:id="@+id/btnReminder"
+            style="@style/ModernMenuButton"
             android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/menu_item_background"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
             android:contentDescription="@string/reminderbtn_desc"
             android:drawableStart="@drawable/ic_reminder"
             android:text="@string/txtreminder"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textColor="@color/textPrimary"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:drawablePadding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/btnFAQ"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnRiskFactors"/>
+            app:layout_constraintTop_toBottomOf="@id/btnRiskFactors" />
 
         <Button
             android:id="@+id/btnFAQ"
+            style="@style/ModernMenuButton"
             android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/menu_item_background"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
             android:contentDescription="@string/faqbtn_desc"
             android:drawableStart="@drawable/ic_qa"
             android:text="@string/txtFAQ"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textColor="@color/textPrimary"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:drawablePadding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/btnSettings"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnReminder"/>
+            app:layout_constraintTop_toBottomOf="@id/btnReminder" />
 
         <Button
             android:id="@+id/btnSettings"
+            style="@style/ModernMenuButton"
             android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/menu_item_background"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
             android:contentDescription="@string/settingsbtn_desc"
             android:drawableStart="@drawable/ic_settings"
             android:text="@string/txtSettings"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textColor="@color/textPrimary"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:drawablePadding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/include5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnFAQ"
-            />
+            app:layout_constraintTop_toBottomOf="@id/btnFAQ" />
 
         <include
             android:id="@+id/include5"
             layout="@layout/nav_bar"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
-
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </erg.com.nioshheatindex.Zoomlayout>

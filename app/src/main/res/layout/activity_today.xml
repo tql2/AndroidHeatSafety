@@ -1,144 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<erg.com.nioshheatindex.Zoomlayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<erg.com.nioshheatindex.Zoomlayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/zoomLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/surface">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/surface">
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
 
-        <ImageView
-            android:id="@+id/imageViewTodayTopPic"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/todayHeaderCard"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/today_banner_desc"
-            android:scaleType="centerCrop"
-            android:src="@drawable/hourlyindex"
-            app:layout_constraintBottom_toTopOf="parent"
+            android:layout_height="104dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/brand"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/imageViewTextToday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="2dp"
-            android:text="@string/today_banner_text"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewTodayTopPic"
-            app:layout_constraintStart_toStartOf="parent"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="20dp"
+                android:paddingEnd="8dp">
 
-        <ImageButton
-            android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|end"
-            android:layout_marginBottom="4dp"
-            android:layout_marginEnd="4dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/txttutorial"
-            android:scaleType="centerCrop"
-            android:src="@drawable/helpbutton"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewTodayTopPic"
-            app:layout_constraintEnd_toEndOf="@+id/imageViewTodayTopPic"/>
+                <TextView
+                    android:id="@+id/imageViewTextToday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/today_banner_text"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/todayHeaderSubtitle"
+                    app:layout_constraintEnd_toStartOf="@id/btnReminders"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
 
-        <ImageButton
-            android:id="@+id/btnReminders"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginEnd="8dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/txtreminders"
-            android:scaleType="centerCrop"
-            android:src="@drawable/reminder_button"
-            app:layout_constraintBottom_toBottomOf="@+id/btnHome"
-            app:layout_constraintEnd_toStartOf="@+id/btnHome"
-            app:layout_constraintTop_toTopOf="@+id/btnHome"
-            />
+                <TextView
+                    android:id="@+id/todayHeaderSubtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/today_banner_desc"
+                    android:textColor="#C7EEF2"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnReminders"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewTextToday" />
+
+                <ImageButton
+                    android:id="@+id/btnReminders"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/txtreminders"
+                    android:padding="8dp"
+                    android:src="@drawable/reminder_button"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnHome"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btnHome"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/txttutorial"
+                    android:padding="8dp"
+                    android:src="@drawable/helpbutton"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewTodayTopPic"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/today_banner_desc" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/hourlyCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/surfaceRaised"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="2dp"
+            app:layout_constraintBottom_toTopOf="@id/atLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/todayHeaderCard"
+            app:strokeColor="@color/divider"
+            app:strokeWidth="1dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/myviewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/hourlycarousel_desc"
+                android:overScrollMode="never" />
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:id="@+id/atLocation"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
             android:text="@string/location"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textColor="@color/textPrimary"
+            android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/btnAP"
+            app:layout_constraintBottom_toTopOf="@id/btnAP"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/myviewpager"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/btnAP"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="64dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/button_primary"
             android:contentDescription="@string/multipurposebtn_desc"
             android:text="@string/hi_precations_btn_text"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="normal"
-            android:minHeight="52dp"
-            app:layout_constraintBottom_toTopOf="@+id/tvMainText"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvMainText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/atLocation"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tvMainText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:gravity="center_horizontal"
-            android:paddingTop="10dp"
-            android:textColor="@color/textPrimary"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/include2"
+            android:gravity="center"
+            android:textColor="@color/textSecondary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/include2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnAP"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <include
             android:id="@+id/include2"
             layout="@layout/nav_bar"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/myviewpager"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:contentDescription="@string/hourlycarousel_desc"
-            android:overScrollMode="never"
-            app:layout_constraintBottom_toTopOf="@+id/atLocation"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewTodayTopPic"/>
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </erg.com.nioshheatindex.Zoomlayout>
