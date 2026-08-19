@@ -5,20 +5,20 @@
               android:layout_height="wrap_content"
               android:layout_alignParentBottom="true"
               android:layout_centerHorizontal="true"
-              android:background="@color/navbargray"
+              android:background="@drawable/nav_bar_background"
               android:elevation="8dp"
               android:gravity="bottom|center"
               android:orientation="horizontal"
-              android:paddingTop="6dp"
-              android:paddingBottom="4dp"
+              android:paddingTop="8dp"
+              android:paddingBottom="6dp"
               android:weightSum="5">
 
     <Button
         android:id="@+id/hiButton"
+        style="@style/ModernNavButton"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_weight="1"
-        android:background="@android:color/transparent"
         android:drawableTop="@drawable/heatbig"
         android:gravity="center"
         android:text="@string/hi_btn_text"
@@ -28,10 +28,10 @@
 
     <Button
         android:id="@+id/tdyButton"
+        style="@style/ModernNavButton"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_weight="1"
-        android:background="@android:color/transparent"
         android:drawableTop="@drawable/clockbig"
         android:gravity="center"
         android:text="@string/today_btn_text"
@@ -41,10 +41,10 @@
 
     <Button
         android:id="@+id/sButton"
+        style="@style/ModernNavButton"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_weight="1"
-        android:background="@android:color/transparent"
         android:drawableTop="@drawable/symptomsbig"
         android:gravity="center"
         android:text="@string/symptoms_btn_text"
@@ -54,10 +54,10 @@
 
     <Button
         android:id="@+id/faButton"
+        style="@style/ModernNavButton"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_weight="1"
-        android:background="@android:color/transparent"
         android:drawableTop="@drawable/firstaidbig"
         android:gravity="center"
         android:text="@string/firstaid_btn_text"
@@ -67,10 +67,10 @@
 
     <Button
         android:id="@+id/mButton"
+        style="@style/ModernNavButton"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_weight="1"
-        android:background="@android:color/transparent"
         android:drawableTop="@drawable/morebig"
         android:gravity="center"
         android:text="@string/more_btn_text"
