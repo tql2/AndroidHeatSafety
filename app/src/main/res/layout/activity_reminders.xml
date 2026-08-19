@@ -5,13 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RemindersActivity">
+    tools:context=".RemindersActivity"
+    android:background="@color/surface">
+
+    <View
+        android:id="@+id/remindersHeaderBackground"
+        android:layout_width="0dp"
+        android:layout_height="132dp"
+        android:background="@drawable/header_gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewSymptomsTopPic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone"
         android:contentDescription="@string/Reminders_banner_desc"
         android:scaleType="centerCrop"
         android:src="@drawable/signsandsymptoms"
@@ -24,12 +34,13 @@
         android:id="@+id/imageViewTextSymptoms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
         android:text="@string/txtHydration"
         android:textColor="@android:color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewSymptomsTopPic"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/remindersHeaderBackground"
         app:layout_constraintStart_toStartOf="parent"
         />
 
@@ -48,7 +59,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSymptomsTopPic" />
+        app:layout_constraintTop_toBottomOf="@id/remindersHeaderBackground" />
 
 
     <TextView
@@ -343,11 +354,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:background="@android:color/black"
+        android:background="@drawable/button_primary"
         android:text="@string/setbutton"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         android:enabled="false"
@@ -362,11 +373,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@android:color/black"
+        android:background="@drawable/button_primary"
         android:text="@string/clearbutton"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/btnSetAlarm"
@@ -382,11 +393,11 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="64dp"
-        android:background="@android:color/black"
+        android:background="@drawable/button_primary"
         android:contentDescription="@string/settings_done_btn"
         android:text="@string/btn_save_settings"
         android:textAllCaps="false"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

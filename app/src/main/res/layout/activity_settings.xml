@@ -10,15 +10,25 @@
         android:id="@+id/relativeLayout5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/surface"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         app:layout_constraintStart_toStartOf="parent">
 
+        <View
+            android:id="@+id/settingsHeaderBackground"
+            android:layout_width="0dp"
+            android:layout_height="132dp"
+            android:background="@drawable/header_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/imageViewMoreTopPic"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:visibility="gone"
             android:contentDescription="@string/about_settings"
             android:scaleType="centerCrop"
             android:src="@drawable/aboutthisapp"
@@ -31,12 +41,13 @@
             android:id="@+id/imageViewTextMore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="20dp"
             android:text="@string/txtSettings"
             android:textColor="@android:color/white"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewMoreTopPic"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/settingsHeaderBackground"
             app:layout_constraintStart_toStartOf="parent"/>
 
 
@@ -46,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:checked="false"
             android:contentDescription="@string/pref_description_celsius"
             android:text="@string/pref_title_celsius"
@@ -54,7 +65,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewMoreTopPic"/>
+            app:layout_constraintTop_toBottomOf="@id/settingsHeaderBackground"/>
 
         <TextView
             android:id="@+id/tvCelsius"
@@ -63,7 +74,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/pref_description_celsius"
-            android:textColor="@android:color/black"
+            android:textColor="@color/textSecondary"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/switchCelsius"
@@ -93,7 +104,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/pref_description_cache"
-            android:textColor="@android:color/black"
+            android:textColor="@color/textSecondary"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/switchCache"
@@ -107,11 +118,11 @@
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="64dp"
             android:layout_marginStart="64dp"
-            android:background="@android:color/black"
+            android:background="@drawable/button_primary"
             android:contentDescription="@string/settings_done_btn"
             android:text="@string/btn_save_settings"
             android:textAllCaps="false"
-            android:textColor="@android:color/white"
+            android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
